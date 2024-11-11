@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Manrope' , sans-serif;
+    --color-primario: #f1ebdf;
+    --color-secundario: #5f5d5d;
+    --light-color: #ceccc6;
+    --color-terciario: #f18d53;
+    --hover-color: #ffff;
+    
+}
+
+body {
+    background-color: var(--color-primario);
+}
+
+.main-header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 30px;
+    
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: contain;
+        width: 200px;
+        margin: 12px;
+    }
+
+    .user-info {
+        display: flex;
+        padding: 0 5px;
+        gap: 12px;
+
+        .user-avatar , .cart-icon {
+            color: var(--color-secundario);
+            font-size: 20px;
+            cursor: pointer;
+            transition: color .25s ease-in-out;
+
+            &:hover {
+                color: var(--hover-color);
+            }
+        }
+  }
+    }
+
+    .main-nav {
+        /* display: flex; */
+        border-top: 1px solid var(--light-color);
+    
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 12px;
+            padding: 0px 12px;
+            margin: 16px;
+    
+           a {
+            padding: 0 12px;
+            font-size: 16px;
+            color: var(--color-secundario);
+            text-decoration: none;
+            transition: color .25s ease-in-out;
+        
+            &:hover {
+                color: var(--hover-color);
+            }
+           } 
+            }
+        }
+
+        .slider {
+            img {
+                width: 100%;
+                max-height: 300px;
+                object-fit: cover;
+                
+            }
+        }
+        
+        .product-gallery {
+            .titulo-principal {
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--color-secundario);
+                margin: 16px 5px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .product-container {
+                background-color: #f7f0e2;
+                border-radius: 10%;
+                height: 100%;
+                margin: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 25px;
+
+                .card  {
+                    height: 480px;
+                    width: 275px;
+                    border: solid 1px var(--light-color) ;
+                    position: relative;
+                    margin: 10px;
+                    overflow: hidden; 
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    }
+                    
+                    .card-img {
+                        overflow: hidden; 
+
+                        img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        transition: transform 0.3s ease;
+
+                        &:hover {
+                        transform: scale(1.1);
+                        }
+                        }
+                    }
+                    .card-info {
+
+                        .titulo {
+                        color: var(--color-secundario);
+                        font-weight: 300;
+                        font-size: 14px;
+                        margin: 5px 5px;
+                        }
+
+                        .card-price {
+                        color: var(--color-secundario);
+                        font-weight: 500;
+                        font-size: 16px;
+                        margin: 5px 5px;
+                        }
+                    }
+                    .card-add {
+                        border: solid 3px var(--color-terciario);
+                        border-radius: 10%;
+                        padding: 10px 5px;
+                        background-color: var(--color-primario) ;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 80px;
+                        right: 80px;
+                        transition: background-color .25s ease-in-out, transform .5s ease-in-out, opacity .25s ease-in-out;
+                        cursor: pointer;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--color-terciario);
+                            font-weight: 600;
+                            font-size: 16px;
+                            transition: color .25s ease-in-out, transform .5s ease-in-out, opacity .25s ease-in-out;
+                            cursor: pointer;
+                        }
+                        }
+
+                        .card-add:hover a, .card-add:hover {
+                            background-color: var(--color-terciario);
+                            color: var(--color-primario);
+                        }
+
+                    }
+                }
+            }
+
+            /* ============================ */
+            /* ESTILOS PRODUCT-DETAIL-1 */
+            /* ============================ */
+
+            .description {
+                .titulo-principal {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: var(--color-secundario);
+                    padding: 16px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .description-art1 {
+                        background-color: #f7f0e2;
+                        border-radius: 10%;
+                        height: 100%;
+                        width: auto;
+                        margin: 20px;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 16px;
+                        padding: 25px;
+
+                        .descrip-img {
+                            padding: 10px;
+
+                            img { 
+                                width: 500px;
+                                height: 100%;
+                            }
+                        }
+
+                        .descrip-info {
+                            padding: 10px;
+                            flex-grow: 2;
+                            width: 300px;
+                    
+                            .titulo {
+                            font-size: 18px;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                            }
+
+                            .price {
+                                font-size: 20px;
+                                font-weight: 600;
+                                margin-bottom: 5px;
+                            }
+
+                            .medidas {
+                            font-size: 16px;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                            }
+
+                            .info {
+                            font-size: 14px;
+                            font-weight: 400;
+                            }
+                        }
+                    }
+                    
+                }       
